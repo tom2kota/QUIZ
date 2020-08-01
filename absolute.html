@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Position: absolute</title>
+    <style>
+        .absolute {
+            position: absolute;
+            border: transparent solid 3px;
+            /*height: 50vh;*/
+            background-color: aliceblue;
+        }
+
+        .top {
+            top: 250px
+        }
+
+        .bottom {
+            bottom: 100px
+        }
+
+        .left {
+            left: 100px
+        }
+
+        .right {
+            right: 100px
+        }
+
+        .red {
+            border-color: tomato
+        }
+
+        .green {
+            border-color: darkcyan;
+        }
+
+        .z-index-1 {
+            z-index: 1;
+        }
+
+        .z-index-2 {
+            z-index: 2;
+        }
+        .margin{
+            margin: 180px;
+        }
+    </style>
+</head>
+<body>
+<div class="absolute red top left z-index-2">
+    <h1>Абсолютно позиционируемый элемент</h1>
+    <h4>{block #1} - (position: absolute; top: 250px; left: 100px; z-index: 2;)</h4>
+    <p>
+        это элемент, чьё вычисленное значение position является absolute или fixed.
+        <strong> top, right, bottom, left</strong> задают смещения от краёв содержащего блок элемента.
+        (Содержащий блок является предком, относительно которого расположен элемент.)
+        <a href="https://developer.mozilla.org/ru/docs/Web/CSS/position">(link)</a>
+    </p>
+    <p>
+        Если элемент имеет поля, они добавляются к смещению. Элемент устанавливает новый контекст
+        форматирования блока (BFC) для своего содержимого.
+    </p>
+
+</div>
+
+<div class="absolute green z-index-1 ">
+    <h2>position: absolute</h2>
+    <h4>{block #2} - (position: absolute; z-index: 1;)</h4>
+    <p>
+        В большинстве случаев абсолютно cпозиционированные элементы, которые имеют height и width установленные в auto,
+        имеют размер, соответствующий их содержимому. Тем не менее, незамещаемые, абсолютно cпозиционированные элементы
+        можно сделать такими, чтобы они заполнили доступное вертикальное пространство, указав как top, так и bottom, и
+        оставляя height неопределенным (то есть , auto). Ими также можно заполнить доступное горизонтальное
+        пространство, указав как left, так и right, и оставляя width как auto.
+        <a href="https://www.w3schools.com/css/css_positioning.asp">(link)</a>
+    </p>
+
+
+    <ul>
+        За исключением только что описанного случая (абсолютно позиционированных элементов, заполняющих доступное
+        пространство):
+        <li>
+            Если указаны top и bottom (технически, не auto) — приоритет будет у top.
+        </li>
+        <li>
+            Если указаны left и right: приоритет будет у left, когда direction ltr (английский язык, горизонтальный
+            японский
+            и т. д.), приоритет будет у right, когда direction является rtl (персидский , Арабский, иврит и т. д.).
+        </li>
+    </ul>
+
+
+</div>
+
+<div class="absolute green top margin ">
+    <h2>position: absolute</h2>
+    <h4>{block #3} - (position: absolute;  top: 250px;  margin: 180px; )</h4>
+    <p>
+        Элемент удаляется из обычного потока документов, и для элемента в макете страницы не создается пробела. Он
+        расположен относительно его ближайшего относительно позиционированного предка, если таковой имеется; в противном
+        случае он помещается относительно исходного содержащего блока. Его конечная позиция определяется значениями top,
+        right, bottom, и left.
+        Это значение создаёт новый контекст наложения, когда значение z-index не auto. Поля абсолютно позиционированных
+        коробок не сворачиваются с другими полями.
+        <a href="https://webref.ru/course/position/relative-absolute">(link)</a>
+    </p>
+</div>
+
+</body>
+</html>

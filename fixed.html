@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Position: fixed</title>
+    <style>
+        .fixed {
+            position: fixed;
+            border: transparent solid 3px;
+            /*height: 50vh;*/
+            background-color: aliceblue;
+        }
+
+        .top {
+            top: 250px
+        }
+
+        .bottom {
+            bottom: 100px
+        }
+
+        .left {
+            left: 100px
+        }
+
+        .right {
+            right: 100px
+        }
+
+        .red {
+            border-color: tomato
+        }
+
+        .green {
+            border-color: darkcyan;
+        }
+
+        .z-index-1 {
+            z-index: 1;
+        }
+
+        .z-index-2 {
+            z-index: 2;
+        }
+
+        .margin {
+            margin: 180px;
+        }
+    </style>
+</head>
+<body>
+<div class="fixed red top left z-index-2">
+    <h1>Абсолютно позиционируемый элемент</h1>
+    <h4>{block #1} - (position: fixed; top: 250px; left: 100px; z-index: 2;)</h4>
+    <p>
+        это элемент, чьё вычисленное значение position является fixed или fixed.
+        <strong> top, right, bottom, left</strong> задают смещения от краёв содержащего блок элемента.
+        (Содержащий блок является предком, относительно которого расположен элемент.)
+        <a href="https://developer.mozilla.org/ru/docs/Web/CSS/position">(link)</a>
+    </p>
+    <p>
+        Если элемент имеет поля, они добавляются к смещению. Элемент устанавливает новый контекст
+        форматирования блока (BFC) для своего содержимого.
+    </p>
+
+</div>
+
+<div class="fixed green z-index-1 ">
+    <h2>position: fixed</h2>
+    <h4>{block #2} - (position: fixed; z-index: 1;)</h4>
+    <p>
+        В большинстве случаев абсолютно cпозиционированные элементы, которые имеют height и width установленные в auto,
+        имеют размер, соответствующий их содержимому. Тем не менее, незамещаемые, абсолютно cпозиционированные элементы
+        можно сделать такими, чтобы они заполнили доступное вертикальное пространство, указав как top, так и bottom, и
+        оставляя height неопределенным (то есть , auto). Ими также можно заполнить доступное горизонтальное
+        пространство, указав как left, так и right, и оставляя width как auto.
+        <a href="https://www.w3schools.com/css/css_positioning.asp">(link)</a>
+    </p>
+
+
+    <ul>
+        За исключением только что описанного случая (абсолютно позиционированных элементов, заполняющих доступное
+        пространство):
+        <li>
+            Если указаны top и bottom (технически, не auto) — приоритет будет у top.
+        </li>
+        <li>
+            Если указаны left и right: приоритет будет у left, когда direction ltr (английский язык, горизонтальный
+            японский
+            и т. д.), приоритет будет у right, когда direction является rtl (персидский , Арабский, иврит и т. д.).
+        </li>
+    </ul>
+
+
+</div>
+
+<div class="fixed green top margin ">
+    <h2>position: fixed</h2>
+    <h4>{block #3} - (position: fixed; top: 250px; margin: 180px; )</h4>
+    <p>
+        Элемент выбивается из обычного потока документа, и для элемента в макете страницы не создается пространство. Он
+        позиционируется относительно исходного содержащего блока, установленного viewport, за исключением случаев, когда
+        один из его предков имеет свойство transform, perspective, или filter, установленное на что-то иное, кроме none
+        (см. CSS Transforms Spec), и в этом случае этот предок ведет себя как содержащий блок. (Обратите внимание, что
+        существуют несогласованности браузера с perspective и filter, способствующими содержанию формирования блоков.)
+        Его конечная позиция определяется значениями top, right, bottom и left.
+    </p>
+    <p>
+        Это значение всегда создает новый контекст наложения. В печатных документах элемент помещается в одно и то же
+        положение на каждой странице.
+    </p>
+</div>
+
+</body>
+</html>

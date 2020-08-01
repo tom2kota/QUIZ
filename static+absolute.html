@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Position: static + absolute</title>
+    <style>
+        .static {
+            position: static;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
+            background-color: honeydew;
+        }
+
+        .top {
+            top: 0
+        }
+
+        .bottom {
+            bottom: 0;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            right: 0;
+        }
+
+        .height {
+            height: 200px;
+        }
+
+        .red {
+            border: tomato solid 3px;
+        }
+
+        .green {
+            border: darkcyan solid 3px;
+        }
+
+        .margin {
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="static red">
+    <h3>{position: static}</h3>
+    <div class="absolute green top bottom left right margin">
+        <h2>{position: absolute}</h2>
+
+    </div>
+</div>
+
+
+</body>
+</html>

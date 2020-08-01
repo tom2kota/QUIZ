@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Position: static</title>
+    <style>
+        .static {
+            position: static;
+            border: transparent solid 3px;
+            /*height: 50vh;*/
+            background-color: aliceblue;
+        }
+
+        .top {
+            top: 500px
+        }
+
+        .bottom {
+            bottom: 100px
+        }
+
+        .left {
+            left: 100px
+        }
+
+        .right {
+            right: 100px
+        }
+
+        .red {
+            border-color: tomato
+        }
+
+        .green {
+            border-color: darkcyan;
+        }
+
+        .z-index-1 {
+            z-index: 1;
+        }
+
+        .z-index-2 {
+            z-index: 2;
+        }
+
+        .margin {
+            margin: 100px;
+        }
+
+        .padding {
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="static red top left z-index-2">
+    <h1>элемент по умолчанию</h1>
+    <h4>{block #1} - (position: static; top: 500px; left: 100px; z-index: 2;)</h4>
+    <p>
+        Это значение позволяет элементу находиться в обычном его состоянии, расположенном на своем месте в документе.
+
+        <a href="https://developer.mozilla.org/ru/docs/Web/CSS/position">(link)</a>
+    </p>
+    <p>
+        Свойства <strong> top, right, bottom, left, z-index</strong> не применяются к данному элементу.
+        Это значение по умолчанию.
+    </p>
+
+</div>
+
+<div class="static green z-index-1">
+    <h2>position: static</h2>
+    <h4>{block #2} - (position: static; z-index: 1;)</h4>
+    <p>
+        Это значение позволяет элементу находиться в обычном его состоянии, расположенном на своем месте в документе.
+        Свойства <strong> top, right, bottom, left, z-index</strong> не применяются к данному элементу.
+        Это значение по умолчанию.
+        <a href="https://www.w3schools.com/css/css_positioning.asp">(link)</a>
+    </p>
+</div>
+
+<div class="static green top margin">
+    <h2>position: static</h2>
+    <h4>{block #3} - (position: static; top: 500px; margin: 100px;)</h4>
+    <p>
+        Это значение позволяет элементу находиться в обычном его состоянии, расположенном на своем месте в документе.
+        Свойства <strong> top, right, bottom, left, z-index</strong> не применяются к данному элементу.
+        Это значение по умолчанию.
+        <a href="https://webref.ru/course/position/relative-absolute">(link)</a>
+    </p>
+</div>
+
+</body>
+</html>
