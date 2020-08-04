@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pull</title>
+    <style>
+        code {
+            font-family: Consolas, "courier new";
+            color: crimson;
+            background-color: #f1f1f1;
+            padding: 2px;
+            font-size: 105%;
+        }
+
+        .pull {
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+
+<div class="pull">
+    <p> which statement references the DOM node created by the code shown:</p>
+    <code>
+        &lt;p&gt; class="pull" lorem ipsum &lt;/p &gt;
+    </code>
+    <ul>
+        <li>
+            document.querySelector('.pull')
+        </li>
+        <li>
+            document.querySelector('#pull')
+        </li>
+        <li>
+            Document.querySelector('#pull')
+        </li>
+        <li>
+            Document.querySelector('pull')
+        </li>
+        <li>
+            Document.querySelector('class.pull')
+        </li>
+
+    </ul>
+</div>
+
+<script>
+    document.querySelector('.pull').style.backgroundColor = "green";
+</script>
+
+
+</body>
+</html>
